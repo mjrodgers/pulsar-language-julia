@@ -1,0 +1,23 @@
+name: 'Julia (WASM)'
+scopeName: 'source.julia'
+type: 'modern-tree-sitter'
+parser: 'tree-sitter-julia'
+
+
+fileTypes: [
+  'jl'
+]
+firstLineRegex:
+  # shebang line
+  '^#!.*\\bjulia\\s*$'
+
+treeSitter:
+  grammar: 'tree-sitter-julia/tree-sitter-julia.wasm'
+  highlightsQuery: 'tree-sitter-julia/highlights.scm'
+  tagsQuery: 'tree-sitter-julia/tags.scm'
+  # localsQuery: 'tree-sitter-julia/locals.scm'
+  # foldsQuery: 'tree-sitter-julia/folds.scm'
+  indentsQuery: 'tree-sitter-julia/indents.scm'
+
+comments:
+  start: '# '
