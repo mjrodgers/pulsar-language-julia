@@ -16,7 +16,7 @@ treeSitter:
   highlightsQuery: 'tree-sitter-julia/highlights.scm'
   tagsQuery: 'tree-sitter-julia/tags.scm'
   # localsQuery: 'tree-sitter-julia/locals.scm'
-  # foldsQuery: 'tree-sitter-julia/folds.scm'
+  foldsQuery: 'tree-sitter-julia/folds.scm'
   indentsQuery: 'tree-sitter-julia/indents.scm'
 
 comments:

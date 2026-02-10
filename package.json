@@ -1,5 +1,5 @@
 {
-  "name": "tree-sitter-julia",
+  "name": "language-julia-redux",
   "version": "0.0.1",
   "description": "Julia language support for Pulsar using modern-tree-sitter.",
   "keywords": [],
