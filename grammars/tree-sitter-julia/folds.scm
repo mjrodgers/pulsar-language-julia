@@ -25,10 +25,22 @@
   (#set! fold.endAt lastNamedChild.startPosition)
   (#set! fold.adjustToEndOfPreviousRow true))
 
-((elseif_clause) @fold
-  (#set! fold.endAt endPosition))
+((if_statement
+  (block)) @fold
+  (#set! fold.endAt endPosition)
+  (#set! fold.adjustToEndOfPreviousRow true))
+((elseif_clause
+  (block)) @fold
+  (#set! fold.endAt endPosition)
+  (#set! fold.adjustToEndOfPreviousRow true))
+((else_clause
+  (block)) @fold
+  (#set! fold.endAt endPosition)
+  (#set! fold.adjustToEndOfPreviousRow true))
+; (else_clause) @fold
 
-((else_clause) @fold
-  (#set! fold.endAt endPosition))
+;
+; ((else_clause) @fold
+;   (#set! fold.endAt endPosition))
 
-(if_statement) @fold
+; (block) @fold
